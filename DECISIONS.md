@@ -25,3 +25,15 @@ One-way in the ordinary data-repository sense: moving a product between
 repositories is cheap in machinery and expensive in everything that points at
 it — roots in the contract, origins in the site's config, and the union
 `check:docs` holds across origins.
+
+## D2 — 2026-09-27 — OPeNDAP subsets of the daily files, surface and bottom, 0.007 degree
+
+**Source: VIMS's THREDDS at tds.vims.edu, by OPeNDAP**, asking for the top
+and bottom s-levels only; the daily files are 2.75-12 GB and whole-file
+reads are not possible on Actions. A mirror exists on the MARACOOS/RPS EDS
+server and is not used: it posts later and skipped a day in the week
+surveyed.
+
+**Shape: one regional grid per root at 0.007 degree, `regional: true`**, no
+tiles; bottom roots named for the bottom and carrying no depth. **Published,
+not drawn** (the owner, 2026-09-27).

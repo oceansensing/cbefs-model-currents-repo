@@ -3,12 +3,29 @@
 The CBEFS **currents** — a data repository of the oceansensing ocean map system: its own
 Pages site, its own schedule, its own gigabyte, holding no code of its own.
 
-**Nothing is published yet** (2026-09-27). `PLAN.md` is the founding plan;
+**Built and rehearsed 2026-09-27; not yet live** (it waits on the owner's
+secrets). `PLAN.md` is the founding plan;
 `CLAUDE.md` carries what must not be got wrong and the shared doc doctrine.
 
-## What it will publish
+## What it publishes
 
 The Chesapeake Bay Environmental Forecasting System's **surface currents**.
+
+| root | quantity |
+| --- | --- |
+| `cur-cbefs.json` | surface currents, a vector pair (integers at `unitScale` 0.001) |
+
+The hourly frame at or before now, from the SURFACE_VELOCITY file. 1.4 MB
+(measured 2026-09-27).
+
+Every root is one regional grid at 0.007 degree (336 x 438, `regional:
+true`), `source: Chesapeake Bay Environmental Forecast System (CBEFS),
+Virginia Institute of Marine Science` — the citation the data's license asks
+for. **A bottom root is s-level 0** (ROMS counts from the seabed up), and its
+header carries no depth, as Mercator's `bottomt` does not. The fetcher is the
+site's `scripts/fetch-cbefs.py`, shared by the three CBEFS repositories and
+scoped here with `--only=`; the workflow is dispatch-only until its first
+dispatched run publishes.
 
 These products are published **operationally but not drawn on the website's
 map** — the owner's call, 2026-09-27. The map's status line still reports

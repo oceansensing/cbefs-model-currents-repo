@@ -118,7 +118,8 @@ fact from a guess that aged.
 
 - **`PLAN.md`** — the founding plan and running record.
 - **`DECISIONS.md`** — dated one-way decisions, D1 onward.
-- **`pipeline/products.toml`** — not written yet.
+- **`pipeline/products.toml`** — the products, the step and the budget.
+- **`.github/workflows/publish.yml`** — dispatch-only until the first publish.
 
 ## What must not be got wrong here
 
@@ -126,8 +127,12 @@ fact from a guess that aged.
   lattice.** A regrid onto regular latitude/longitude stands between the
   server and anything publishable, and a wrong one looks like plausible
   water. It gets a positive control before its output is believed.
-- **Bottom means the deepest s-level, which is a different depth in every
-  cell.** Say so in the header and never label a bottom field with a depth.
+- **Bottom is s-level 0**, because ROMS counts from the seabed up, and it is
+  a different depth in every cell: never label a bottom field with a depth.
+  Swapping the ends is silent, so every run checks the estuary's own
+  physics — bottom salinity must exceed the surface's — and refuses a frame
+  where it does not. The currents' twin check: mid-Bay |v| must exceed 1.3 x
+  |u|, because the tide runs along the channel.
 - **Cite CBEFS and VIMS** wherever the data is shown; it is the license's
   one condition.
 

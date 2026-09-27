@@ -1,0 +1,42 @@
+# What this repository publishes: CBEFS surface currents, from VIMS's Chesapeake Bay
+# Environmental Forecast System (CBEFS), read by OPeNDAP from tds.vims.edu —
+# published, not drawn on the website's map (the owner, 2026-09-27). Cite
+# CBEFS and the Virginia Institute of Marine Science wherever it is shown:
+# the data's license asks exactly that, and every header's `source` says it.
+#
+# The fetcher is the site's `scripts/fetch-cbefs.py`, shared by the three
+# CBEFS repositories: this step is scoped with `--only=` to this repository's
+# products, or the write fence refuses the run.
+#
+# - **Every `roots` entry must be one the site's `test-schema.mjs --roots`
+#   publishes**, or the orchestrator exits 2.
+# - **Paths are relative to the site checkout**: `scripts/...`.
+# - **One regional grid per root at 0.007 degree**, `regional: true`, no
+#   tiles; about 0.8 MB a field (1.4 MB for the currents), measured
+#   2026-09-27. A bottom root's header carries no depth: the deepest level is
+#   a different depth in every cell, and the root's name says bottom.
+#
+# **The budget.** Each run publishes the hourly surface current at or before
+# now, on a schedule every three hours: at most three hours old when
+# published, plus three to the next run and GitHub's lateness. 8 hours;
+# re-measure after a week.
+
+[contract]
+check = ["node", "scripts/test-schema.mjs"]
+roots = ["node", "scripts/test-schema.mjs", "--roots"]
+
+[defaults]
+timeout_minutes = 20
+
+# Named after the server all three CBEFS repositories read.
+[steps.cbefs]
+cmd = ["python3", "scripts/fetch-cbefs.py", "--only=cur-cbefs"]
+lane = "vims-thredds"
+
+[products.cur-cbefs]
+title = "CBEFS surface currents"
+step = "cbefs"
+roots = ["cur-cbefs.json"]
+writes = ["cur-cbefs.json"]
+max_age_hours = 8
+namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs"]
