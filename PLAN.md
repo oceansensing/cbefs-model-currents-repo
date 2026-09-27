@@ -89,3 +89,12 @@ reader, `contract: 1`. Each root was fetched from Pages
 and served. The schedule, `47 */3 * * *`, was then uncommented (longest gap
 3 h, so the watchdog's silence budget is 5.5 h); the
 first scheduled run is the next reading.
+
+## The workflow's packages come from the site — 2026-09-27
+
+The publish workflow installs `site/scripts/requirements-cbefs.txt`, one file
+per fetcher family, instead of naming packages in its own `pip install`
+line. Dependabot reads requirements files and never a workflow line: an
+inline pin elsewhere had carried `requests` 2.32.3, a version with two
+advisories, unflagged. The site's `check:docs` now refuses an inline package
+here. Confirmed by a dispatched run, green on build, Pages and R2.
