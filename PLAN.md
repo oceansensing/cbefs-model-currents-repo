@@ -73,9 +73,19 @@ the roots in its contract: every file matched, every fate `fresh`.
 
 ## Open
 
-1. **Go live**, waiting on the owner's secrets (`PIPELINES_SSH_KEY`, the
-   three `R2_*`): the roots join the site's contract and this origin joins
-   `MAP_ORIGINS`, then a dispatched run, then the schedule uncommented.
+1. **Went live 2026-09-27** — the entry below.
 2. **Re-measure `max_age_hours`** after a week of scheduled runs.
 3. The owner is writing to the CBEFS group (Marjorie Friedrichs's lab) about
    the automated daily reads and the citation.
+
+## 2026-09-27 — live
+
+The owner added the secrets; the site's commit `d978a1b` put this
+repository's roots in the contract and its origin in `MAP_ORIGINS`; the
+dispatched run 36296058765 went green on its first try — build, Pages and R2 — and
+`status/status.json` read, at 2026-09-27T05:04:25Z: every product `fresh`
+(1 of 1), the nearest frame 0.07 h from the
+reader, `contract: 1`. Each root was fetched from Pages
+and served. The schedule, `47 */3 * * *`, was then uncommented (longest gap
+3 h, so the watchdog's silence budget is 5.5 h); the
+first scheduled run is the next reading.

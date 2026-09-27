@@ -3,11 +3,9 @@
 # and to Cloudflare R2. Generated 2026-09-27 from the sibling data
 # repositories' workflow (mercator-model-fields-repo's, less its tile caches).
 #
-# **Dispatch-only until a dispatched run has published a tree** — the ritual
-# that turned Sentinel-3's schedule on (2026-09-19): prove the pipeline, THEN
-# uncomment the two schedule lines below, in the same commit as the docs.
-# `status/status.json` reports `schedule: null` until then, and the site's
-# watchdog names an origin with no schedule on sight.
+# **Scheduled since 2026-09-27**, after the dispatched run 36296058765 published
+# a tree (build, Pages and R2 all green) — the ritual that turned
+# Sentinel-3's schedule on: prove the pipeline, then turn the schedule on.
 #
 # Needs, from the owner: `PIPELINES_SSH_KEY` (this repository's read-only
 # deploy key on oceansensing.github.io) and the organization's three R2_*
@@ -22,8 +20,8 @@ on:
         description: 'Rebuild even if the probe says the tree is current'
         type: boolean
         default: false
-  # schedule:
-  #   - cron: '47 */3 * * *'
+  schedule:
+    - cron: '47 */3 * * *'
 
 permissions: {}
 

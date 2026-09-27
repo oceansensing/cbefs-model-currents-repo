@@ -3,8 +3,8 @@
 The CBEFS **currents** — a data repository of the oceansensing ocean map system: its own
 Pages site, its own schedule, its own gigabyte, holding no code of its own.
 
-**Built and rehearsed 2026-09-27; not yet live** (it waits on the owner's
-secrets). `PLAN.md` is the founding plan;
+**Live since 2026-09-27** — published to Pages and R2, not drawn on the
+website's map. `PLAN.md` is the founding plan;
 `CLAUDE.md` carries what must not be got wrong and the shared doc doctrine.
 
 ## What it publishes
@@ -24,8 +24,8 @@ Virginia Institute of Marine Science` — the citation the data's license asks
 for. **A bottom root is s-level 0** (ROMS counts from the seabed up), and its
 header carries no depth, as Mercator's `bottomt` does not. The fetcher is the
 site's `scripts/fetch-cbefs.py`, shared by the three CBEFS repositories and
-scoped here with `--only=`; the workflow is dispatch-only until its first
-dispatched run publishes.
+scoped here with `--only=`; the workflow runs on `47 */3 * * *` since
+2026-09-27, after its first dispatched run published.
 
 These products are published **operationally but not drawn on the website's
 map** — the owner's call, 2026-09-27. The map's status line still reports
