@@ -49,11 +49,11 @@ Please cite the Chesapeake Bay Environmental Forecast System (CBEFS), Virginia
 Institute of Marine Science, when using this data."* The citation is carried
 in every published header's `source` and in the README.
 
-## How it will run
+## How it runs
 
 The orchestrator (the site's private `pipeline/`), the fetchers and the
 published-file contract all come from `oceansensing.github.io`, checked out at
-run time. This repository will carry `pipeline/products.toml` and its publish
+run time. This repository carries `pipeline/products.toml` and its publish
 workflow, and nothing else executable. Each run publishes to GitHub Pages and
 to Cloudflare R2 from one build. Sibling repositories of the same model:
 `cbefs-model-fields-repo` and `cbefs-model-bgc-repo`.
@@ -69,4 +69,6 @@ README.md       what this is
 CLAUDE.md       what must not be got wrong, and the shared doc doctrine
 PLAN.md         the founding plan and running record
 DECISIONS.md    dated one-way decisions, D1 onward
+pipeline/       products.toml, the declaration the orchestrator reads
+.github/        the publish workflow
 ```
