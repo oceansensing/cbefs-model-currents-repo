@@ -71,7 +71,7 @@ jobs:
         with:
           node-version: '22'
       - name: Install what the fetcher needs
-        run: pip install --no-cache-dir numpy
+        run: pip install --no-cache-dir -r site/scripts/requirements-cbefs.txt
       - name: Unit-test the orchestrator
         working-directory: site
         run: python3 pipeline/test_orchestrate.py
