@@ -98,3 +98,26 @@ line. Dependabot reads requirements files and never a workflow line: an
 inline pin elsewhere had carried `requests` 2.32.3, a version with two
 advisories, unflagged. The site's `check:docs` now refuses an inline package
 here. Confirmed by a dispatched run, green on build, Pages and R2.
+
+## 2026-09-28 — the whole column and the bottom, from the HISTORY file
+
+Two roots joined, from the HISTORY file's six-hourly snapshots of every
+level: the mean over the whole water column (ROMS's own `ubar`/`vbar`) and
+the bottom current (level 0). Both are on staggered points along the grid's
+axes, and VIMS's files publish no grid angle, so the site's `scripts/roms.py`
+reads it off the grid's coordinates: -0.96 to 0.64 degrees, the grid
+right-handed and orthogonal to 0.001 degree.
+
+**Measured before written, and held every run.** The top level, turned by
+minus that angle, reproduces VIMS's `u_surf`/`v_surf` to a median of 4e-6
+m/s — by the angle itself, 2e-3 — so VIMS's surface file is turned the other
+way from ROMS's convention, at most 1.9 degrees apart; these two roots are
+turned by the geometry, and the check uses VIMS's sign only to confirm the
+levels are read right. The twenty levels' mean reproduces `ubar` to 1e-4.
+Over the run's 25 snapshots the tide runs along the channel for the column
+(mean |v| 1.79 x |u|) and the bottom (1.38, held at its own 1.15, a swap
+reading 0.73), and the bottom is slower than the surface (0.068 against
+0.176 m/s).
+
+Rehearsed from this Mac: the step's three roots in 230 s, VIMS's server the
+slow part, every file matching the site's contract. Budget 13 hours.

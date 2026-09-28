@@ -9,14 +9,27 @@ website's map. `PLAN.md` is the founding plan;
 
 ## What it publishes
 
-The Chesapeake Bay Environmental Forecasting System's **surface currents**.
+The Chesapeake Bay Environmental Forecasting System's **currents**: at the
+surface, averaged over the whole water column, and at the bottom.
 
 | root | quantity |
 | --- | --- |
 | `cur-cbefs.json` | surface currents, a vector pair (integers at `unitScale` 0.001) |
+| `cur-cbefs-depthavg.json` | currents averaged over the whole water column, the same form |
+| `cur-cbefs-bottom.json` | bottom currents (s-level 0), the same form |
 
-The hourly frame at or before now, from the SURFACE_VELOCITY file. 1.4 MB
-(measured 2026-09-27).
+The surface current is the hourly frame at or before now, from the
+SURFACE_VELOCITY file, 1.4 MB (measured 2026-09-27). The other two, since
+2026-09-28, are the six-hourly snapshot at or before now, from the HISTORY
+file: ROMS's own `ubar`/`vbar` for the column, level 0 for the bottom, each
+about 1.35 MB. Neither header carries a depth: the name says which.
+
+**Their direction is the grid's own, and differs from VIMS's surface file by
+up to 1.9 degrees.** HISTORY's velocities are along the grid's axes, and the
+site's `scripts/roms.py` turns them east and north by the angle read off the
+grid's coordinates, ROMS's convention. VIMS's SURFACE_VELOCITY matches the
+same levels turned by minus that angle — a direction twice the angle apart,
+a median 0.3 degrees. The surface root stays VIMS's as published.
 
 Every root is one regional grid at 0.007 degree (336 x 438, `regional:
 true`), `source: Chesapeake Bay Environmental Forecast System (CBEFS),

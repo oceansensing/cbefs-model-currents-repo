@@ -1,4 +1,4 @@
-# What this repository publishes: CBEFS surface currents, from VIMS's Chesapeake Bay
+# What this repository publishes: CBEFS currents — at the surface, averaged over the whole water column, and at the bottom — from VIMS's Chesapeake Bay
 # Environmental Forecast System (CBEFS), read by OPeNDAP from tds.vims.edu —
 # published, not drawn on the website's map (the owner, 2026-09-27). Cite
 # CBEFS and the Virginia Institute of Marine Science wherever it is shown:
@@ -30,7 +30,7 @@ timeout_minutes = 20
 
 # Named after the server all three CBEFS repositories read.
 [steps.cbefs]
-cmd = ["python3", "scripts/fetch-cbefs.py", "--only=cur-cbefs"]
+cmd = ["python3", "scripts/fetch-cbefs.py", "--only=cur-cbefs,cur-cbefs-depthavg,cur-cbefs-bottom"]
 lane = "vims-thredds"
 
 [products.cur-cbefs]
@@ -40,3 +40,29 @@ roots = ["cur-cbefs.json"]
 writes = ["cur-cbefs.json"]
 max_age_hours = 8
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs"]
+
+# **The whole column and the bottom, from the HISTORY file since
+# 2026-09-28**: six-hourly snapshots of every level. The column's mean is
+# ROMS's own `ubar`/`vbar`; the bottom is level 0. Both are turned east and
+# north by the site's `scripts/roms.py` and held to VIMS's own surface
+# velocity, to the levels' mean, and to the tide along the channel over the
+# whole run. The budget: a snapshot at most six hours old when published,
+# three to the next run, four of GitHub's lateness — 13 hours.
+
+# 1.35 MB
+[products.cur-cbefs-depthavg]
+title = "CBEFS currents averaged over the whole water column"
+step = "cbefs"
+roots = ["cur-cbefs-depthavg.json"]
+writes = ["cur-cbefs-depthavg.json"]
+max_age_hours = 13
+namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs-depthavg"]
+
+# 1.33 MB
+[products.cur-cbefs-bottom]
+title = "CBEFS bottom currents"
+step = "cbefs"
+roots = ["cur-cbefs-bottom.json"]
+writes = ["cur-cbefs-bottom.json"]
+max_age_hours = 13
+namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs-bottom"]
