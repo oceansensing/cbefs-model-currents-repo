@@ -1,0 +1,78 @@
+{
+ "schema": 2,
+ "contract": 1,
+ "generated": "2026-10-03T19:42:52Z",
+ "mode": "full",
+ "run": {
+  "id": "37148834593",
+  "url": "https://github.com/oceansensing/cbefs-model-currents-repo/actions/runs/37148834593"
+ },
+ "schedule": {
+  "crons": [
+   "47 */3 * * *"
+  ],
+  "longestGapHours": 3.0
+ },
+ "products": {
+  "cur-cbefs": {
+   "title": "CBEFS surface currents",
+   "roots": [
+    "cur-cbefs.json"
+   ],
+   "fate": "held",
+   "reason": "step cbefs exit 1",
+   "checked": "2026-10-02T01:19:46Z",
+   "updated": "2026-10-02T01:19:46Z",
+   "hour": "2026-10-02T01:00:00Z",
+   "modelRun": "2026-10-01T00:00:00Z",
+   "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+   "hours": [
+    "2026-10-02T01:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "ours",
+   "ageHours": 42.71,
+   "nearestOffsetHours": 42.71
+  },
+  "cur-cbefs-depthavg": {
+   "title": "CBEFS currents averaged over the whole water column",
+   "roots": [
+    "cur-cbefs-depthavg.json"
+   ],
+   "fate": "held",
+   "reason": "step cbefs exit 1",
+   "checked": "2026-10-02T01:19:46Z",
+   "updated": "2026-10-02T01:19:46Z",
+   "hour": "2026-10-02T00:00:00Z",
+   "modelRun": "2026-10-01T00:00:00Z",
+   "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+   "hours": [
+    "2026-10-02T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "ours",
+   "ageHours": 43.71,
+   "nearestOffsetHours": 43.71
+  },
+  "cur-cbefs-bottom": {
+   "title": "CBEFS bottom currents",
+   "roots": [
+    "cur-cbefs-bottom.json"
+   ],
+   "fate": "held",
+   "reason": "step cbefs exit 1",
+   "checked": "2026-10-02T01:19:46Z",
+   "updated": "2026-10-02T01:19:46Z",
+   "hour": "2026-10-02T00:00:00Z",
+   "modelRun": "2026-10-01T00:00:00Z",
+   "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+   "hours": [
+    "2026-10-02T00:00:00Z"
+   ],
+   "stale": true,
+   "staleCause": "ours",
+   "ageHours": 43.71,
+   "nearestOffsetHours": 43.71
+  }
+ }
+}

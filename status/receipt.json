@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "generated": "2026-10-03T19:42:52Z",
+ "mode": "full",
+ "fates": {
+  "cur-cbefs": "held",
+  "cur-cbefs-depthavg": "held",
+  "cur-cbefs-bottom": "held"
+ },
+ "reasons": {
+  "cur-cbefs": "step cbefs exit 1",
+  "cur-cbefs-depthavg": "step cbefs exit 1",
+  "cur-cbefs-bottom": "step cbefs exit 1"
+ },
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": [
+  "cur-cbefs (42.7 h, held)",
+  "cur-cbefs-depthavg (43.7 h, held)",
+  "cur-cbefs-bottom (43.7 h, held)"
+ ]
+}
