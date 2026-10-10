@@ -30,7 +30,7 @@ timeout_minutes = 20
 
 # Named after the server all three CBEFS repositories read.
 [steps.cbefs]
-cmd = ["python3", "scripts/fetch-cbefs.py", "--only=cur-cbefs,cur-cbefs-depthavg,cur-cbefs-bottom"]
+cmd = ["python3", "scripts/fetch-cbefs.py", "--only=cur-cbefs,cur-cbefs-depthavg,cur-cbefs-bottom,uv-cbefs"]
 lane = "vims-thredds"
 
 [products.cur-cbefs]
@@ -66,3 +66,20 @@ roots = ["cur-cbefs-bottom.json"]
 writes = ["cur-cbefs-bottom.json"]
 max_age_hours = 13
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs-bottom"]
+
+# **Currents at fixed depths, R2's alone** (2026-10-10; the site's fetcher, LEVELS): the model's
+# own levels interpolated to the first 17 of Mercator's depths, every one its
+# water reaches, one root a depth named for it to the meter, below the datum as
+# the model's own fixed slices are -- written by the same step as the rest.
+[products.uv-cbefs]
+title = "CBEFS currents at Mercator's depths"
+step = "cbefs"
+roots = ["uv-cbefs-0m.json", "uv-cbefs-2m.json", "uv-cbefs-3m.json", "uv-cbefs-4m.json",
+         "uv-cbefs-5m.json", "uv-cbefs-6m.json", "uv-cbefs-8m.json", "uv-cbefs-10m.json",
+         "uv-cbefs-11m.json", "uv-cbefs-13m.json", "uv-cbefs-16m.json", "uv-cbefs-18m.json",
+         "uv-cbefs-22m.json", "uv-cbefs-25m.json", "uv-cbefs-29m.json", "uv-cbefs-34m.json",
+         "uv-cbefs-40m.json"]
+writes = ["uv-cbefs-*m.json"]
+max_age_hours = 30
+r2_only = true
+namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=uv-cbefs"]

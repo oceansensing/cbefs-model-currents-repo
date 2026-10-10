@@ -44,6 +44,17 @@ These products are published **operationally but not drawn on the website's
 map** — the owner's call, 2026-09-27. The map's status line still reports
 them when they fall behind, which is how their health stays visible.
 
+## Published to R2 alone (since 2026-10-10)
+
+Declared `r2_only` in `pipeline/products.toml`: the same run builds these,
+they are left out of this repository's Pages site and its status, and the R2
+job publishes them beside the rest (the site pipeline's D13, its note of
+2026-10-09). Their roots stay on the `published` branch, as every product's do.
+
+| root | quantity | grid |
+| --- | --- | --- |
+| `uv-cbefs-<depth>m.json` | the current at each of the first 17 of Mercator's depths, 0.494 to 40.344 m, interpolated from the model's 20 terrain-following levels below the datum, from the six-hourly history snapshot the whole-column mean is read from; one root a depth named for it to the meter (`-0m` … `-40m`) | 0.007 degree, `regional: true` |
+
 ## Where the data comes from
 
 **Source, read 2026-09-26/27**: VIMS publishes CBEFS output openly, with no
