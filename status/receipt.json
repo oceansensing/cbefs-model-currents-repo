@@ -1,0 +1,17 @@
+{
+ "schema": 1,
+ "generated": "2026-10-10T21:52:26Z",
+ "mode": "full",
+ "fates": {
+  "cur-cbefs": "fresh",
+  "cur-cbefs-depthavg": "fresh",
+  "cur-cbefs-bottom": "fresh",
+  "uv-cbefs": "fresh"
+ },
+ "reasons": {},
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": []
+}

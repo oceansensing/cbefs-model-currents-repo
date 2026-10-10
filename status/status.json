@@ -1,0 +1,114 @@
+{
+ "schema": 2,
+ "contract": 1,
+ "generated": "2026-10-10T21:52:26Z",
+ "mode": "full",
+ "run": {
+  "id": "38089226672",
+  "url": "https://github.com/oceansensing/cbefs-model-currents-repo/actions/runs/38089226672"
+ },
+ "schedule": {
+  "crons": [
+   "47 */3 * * *"
+  ],
+  "longestGapHours": 3.0
+ },
+ "products": {
+  "cur-cbefs": {
+   "title": "CBEFS surface currents",
+   "roots": [
+    "cur-cbefs.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-10T21:52:26Z",
+   "updated": "2026-10-10T21:52:26Z",
+   "hour": "2026-10-10T21:00:00Z",
+   "modelRun": "2026-10-10T00:00:00Z",
+   "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+   "hours": [
+    "2026-10-10T21:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 0.87,
+   "nearestOffsetHours": 0.87
+  },
+  "cur-cbefs-depthavg": {
+   "title": "CBEFS currents averaged over the whole water column",
+   "roots": [
+    "cur-cbefs-depthavg.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-10T21:52:26Z",
+   "updated": "2026-10-10T18:56:36Z",
+   "hour": "2026-10-10T18:00:00Z",
+   "modelRun": "2026-10-10T00:00:00Z",
+   "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+   "hours": [
+    "2026-10-10T18:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 3.87,
+   "nearestOffsetHours": 3.87
+  },
+  "cur-cbefs-bottom": {
+   "title": "CBEFS bottom currents",
+   "roots": [
+    "cur-cbefs-bottom.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-10T21:52:26Z",
+   "updated": "2026-10-10T18:56:36Z",
+   "hour": "2026-10-10T18:00:00Z",
+   "modelRun": "2026-10-10T00:00:00Z",
+   "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+   "hours": [
+    "2026-10-10T18:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 3.87,
+   "nearestOffsetHours": 3.87
+  },
+  "uv-cbefs": {
+   "title": "CBEFS currents at Mercator's depths",
+   "roots": [
+    "uv-cbefs-0m.json",
+    "uv-cbefs-2m.json",
+    "uv-cbefs-3m.json",
+    "uv-cbefs-4m.json",
+    "uv-cbefs-5m.json",
+    "uv-cbefs-6m.json",
+    "uv-cbefs-8m.json",
+    "uv-cbefs-10m.json",
+    "uv-cbefs-11m.json",
+    "uv-cbefs-13m.json",
+    "uv-cbefs-16m.json",
+    "uv-cbefs-18m.json",
+    "uv-cbefs-22m.json",
+    "uv-cbefs-25m.json",
+    "uv-cbefs-29m.json",
+    "uv-cbefs-34m.json",
+    "uv-cbefs-40m.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-10T21:52:26Z",
+   "updated": "2026-10-10T19:56:16Z",
+   "hour": "2026-10-10T18:00:00Z",
+   "modelRun": "2026-10-10T00:00:00Z",
+   "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+   "hours": [
+    "2026-10-10T18:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 3.87,
+   "nearestOffsetHours": 3.87
+  }
+ }
+}

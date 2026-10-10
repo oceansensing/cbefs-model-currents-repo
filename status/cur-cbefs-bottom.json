@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "cur-cbefs-bottom",
+ "title": "CBEFS bottom currents",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-10T21:52:26Z",
+ "updated": "2026-10-10T18:56:36Z",
+ "hour": "2026-10-10T18:00:00Z",
+ "modelRun": "2026-10-10T00:00:00Z",
+ "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+ "hours": [
+  "2026-10-10T18:00:00Z"
+ ],
+ "files": {
+  "cur-cbefs-bottom.json": {
+   "bytes": 1330544,
+   "sha256": "6abe510c8386a84bd959c69a760f7994c34d0ea3c34341afcffbb03da4ce3f89"
+  }
+ }
+}
