@@ -53,7 +53,7 @@ job publishes them beside the rest (the site pipeline's D13, its note of
 
 | root | quantity | grid |
 | --- | --- | --- |
-| `uv-cbefs-<depth>m.json` | the current at each of the first 17 of Mercator's depths, 0.494 to 40.344 m, interpolated from the model's 20 terrain-following levels below the datum, from the six-hourly history snapshot the whole-column mean is read from; one root a depth named for it to the meter (`-0m` … `-40m`) | 0.007 degree, `regional: true` |
+| `uv-cbefs-<depth>m.json` | the current at each of the first 17 of Mercator's depths, 0.494 to 40.344 m, interpolated from the model's 20 terrain-following levels below the datum; since 2026-10-10 the day's mean, from the averages file's own time-averaged volume fluxes through each face (`Huon`, `Hvom`) over the face's thickness and width, held to the same file's depth-averaged current; one root a depth named for it to the meter (`-0m` … `-40m`) | 0.007 degree, `regional: true` |
 
 ## Where the data comes from
 

@@ -71,6 +71,9 @@ namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbe
 # own levels interpolated to the first 17 of Mercator's depths, every one its
 # water reaches, one root a depth named for it to the meter, below the datum as
 # the model's own fixed slices are -- written by the same step as the rest.
+# **Since that night the day's mean**, from the averages file's own volume
+# fluxes through each face, rather than a six-hourly snapshot with the tide in
+# it; held to the same file's depth-averaged current.
 [products.uv-cbefs]
 title = "CBEFS currents at Mercator's depths"
 step = "cbefs"
