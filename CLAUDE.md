@@ -153,9 +153,14 @@ fact from a guess that aged.
 - **Every `roots` entry in `products.toml` must be one the site's
   `test-schema.mjs --roots` publishes**, or the orchestrator exits 2 and stops
   the publish. The site's `pipeline/ADDING-A-PRODUCT.md` is the guide.
-- **A product that leaves does not take its files with it.** The stage is
-  seeded from the last publish, so a file no step writes any more is carried
-  and served; removing one is a deletion from the `published` branch.
+- **A product that leaves takes its files with it** (since 2026-10-11, the
+  orchestrator's seed): a top-level file no product's `writes` claims is left
+  out of the next tree, so a product taken out of `products.toml` is gone at
+  its next publish. A file a product still claims but no step writes any more
+  is carried and served — a rename inside a product does not heal; removing
+  one is a deletion from the `published` branch. **A committed static is
+  `main`'s**: copied in at every publish, so one removed from `map/` on `main`
+  leaves the tree, and R2, at the next run.
 - **A step's scope must match its products'.** Scope every `[steps.*]` `cmd`
   with `--only=` naming this repository's products: too wide and the write
   fence refuses the run, too narrow and declared files are never written and
