@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "cur-cbefs-depthavg",
+ "title": "CBEFS currents averaged over the whole water column",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-17T21:52:25Z",
+ "updated": "2026-10-17T18:52:56Z",
+ "hour": "2026-10-17T18:00:00Z",
+ "modelRun": "2026-10-17T00:00:00Z",
+ "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+ "hours": [
+  "2026-10-17T18:00:00Z"
+ ],
+ "files": {
+  "cur-cbefs-depthavg.json": {
+   "bytes": 1352883,
+   "sha256": "a510438d51dc2d779f7874d6f5eff115c4c2172a23ed21c71831ca8d97bc23c7"
+  }
+ }
+}
