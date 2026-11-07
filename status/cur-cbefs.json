@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "cur-cbefs",
+ "title": "CBEFS surface currents",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T12:52:14Z",
+ "updated": "2026-11-07T12:52:14Z",
+ "hour": "2026-11-07T12:00:00Z",
+ "modelRun": "2026-11-05T00:00:00Z",
+ "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+ "hours": [
+  "2026-11-07T12:00:00Z"
+ ],
+ "files": {
+  "cur-cbefs.json": {
+   "bytes": 1399225,
+   "sha256": "fb9eacc06fcf8e267f394555a4c31e876277e18a4d4f36e001fa35ba76061341"
+  }
+ }
+}
