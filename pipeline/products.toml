@@ -20,6 +20,15 @@
 # now, on a schedule every three hours: at most three hours old when
 # published, plus three to the next run and GitHub's lateness. 8 hours;
 # re-measure after a week.
+#
+# **A day either side, since 2026-11-08.** Each base also lists, in its
+# `frames` (D31), the hours of the next 24 from the same run — the surface
+# hourly, the whole column and the bottom six-hourly — and the hours of the
+# 24 before it that earlier runs published, kept rather than asked of VIMS
+# again; every hour but the base is a file named for its time
+# (`<root>.v<time>.json`), hence the `.v*.json` beside each root below. About
+# 70 MB in all at 1.3 to 1.4 MB a file. The step names the same files in
+# its namespace.
 
 [contract]
 check = ["node", "scripts/test-schema.mjs"]
@@ -37,7 +46,7 @@ lane = "vims-thredds"
 title = "CBEFS surface currents"
 step = "cbefs"
 roots = ["cur-cbefs.json"]
-writes = ["cur-cbefs.json"]
+writes = ["cur-cbefs.json", "cur-cbefs.v*.json"]
 max_age_hours = 8
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs"]
 
@@ -54,7 +63,7 @@ namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbe
 title = "CBEFS currents averaged over the whole water column"
 step = "cbefs"
 roots = ["cur-cbefs-depthavg.json"]
-writes = ["cur-cbefs-depthavg.json"]
+writes = ["cur-cbefs-depthavg.json", "cur-cbefs-depthavg.v*.json"]
 max_age_hours = 13
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs-depthavg"]
 
@@ -63,7 +72,7 @@ namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbe
 title = "CBEFS bottom currents"
 step = "cbefs"
 roots = ["cur-cbefs-bottom.json"]
-writes = ["cur-cbefs-bottom.json"]
+writes = ["cur-cbefs-bottom.json", "cur-cbefs-bottom.v*.json"]
 max_age_hours = 13
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs-bottom"]
 
