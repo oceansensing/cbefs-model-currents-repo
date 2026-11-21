@@ -1,0 +1,165 @@
+{
+ "schema": 1,
+ "product": "cur-cbefs",
+ "title": "CBEFS surface currents",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-21T15:52:13Z",
+ "updated": "2026-11-21T15:52:13Z",
+ "hour": "2026-11-21T15:00:00Z",
+ "modelRun": "2026-11-21T00:00:00Z",
+ "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+ "hours": [
+  "2026-11-21T15:00:00Z"
+ ],
+ "files": {
+  "cur-cbefs.json": {
+   "bytes": 1388240,
+   "sha256": "9be920c01478097ec6371f85dc46cee972e63e89f1dd15bcc1aea3091ad19d4b"
+  },
+  "cur-cbefs.v20261120T1500Z.json": {
+   "bytes": 1371435
+  },
+  "cur-cbefs.v20261120T1600Z.json": {
+   "bytes": 1384758
+  },
+  "cur-cbefs.v20261120T1700Z.json": {
+   "bytes": 1392059
+  },
+  "cur-cbefs.v20261120T1800Z.json": {
+   "bytes": 1393586
+  },
+  "cur-cbefs.v20261120T1900Z.json": {
+   "bytes": 1390957
+  },
+  "cur-cbefs.v20261120T2000Z.json": {
+   "bytes": 1379307
+  },
+  "cur-cbefs.v20261120T2100Z.json": {
+   "bytes": 1359685
+  },
+  "cur-cbefs.v20261120T2200Z.json": {
+   "bytes": 1348022
+  },
+  "cur-cbefs.v20261120T2300Z.json": {
+   "bytes": 1347750
+  },
+  "cur-cbefs.v20261121T0000Z.json": {
+   "bytes": 1343749
+  },
+  "cur-cbefs.v20261121T0100Z.json": {
+   "bytes": 1342701
+  },
+  "cur-cbefs.v20261121T0200Z.json": {
+   "bytes": 1344039
+  },
+  "cur-cbefs.v20261121T0300Z.json": {
+   "bytes": 1350245
+  },
+  "cur-cbefs.v20261121T0400Z.json": {
+   "bytes": 1364063
+  },
+  "cur-cbefs.v20261121T0500Z.json": {
+   "bytes": 1376005
+  },
+  "cur-cbefs.v20261121T0600Z.json": {
+   "bytes": 1378791
+  },
+  "cur-cbefs.v20261121T0700Z.json": {
+   "bytes": 1378702
+  },
+  "cur-cbefs.v20261121T0800Z.json": {
+   "bytes": 1375041
+  },
+  "cur-cbefs.v20261121T0900Z.json": {
+   "bytes": 1371143
+  },
+  "cur-cbefs.v20261121T1000Z.json": {
+   "bytes": 1364091
+  },
+  "cur-cbefs.v20261121T1100Z.json": {
+   "bytes": 1361795
+  },
+  "cur-cbefs.v20261121T1200Z.json": {
+   "bytes": 1362294
+  },
+  "cur-cbefs.v20261121T1300Z.json": {
+   "bytes": 1362548
+  },
+  "cur-cbefs.v20261121T1400Z.json": {
+   "bytes": 1367290
+  },
+  "cur-cbefs.v20261121T1600Z.json": {
+   "bytes": 1392452
+  },
+  "cur-cbefs.v20261121T1700Z.json": {
+   "bytes": 1398242
+  },
+  "cur-cbefs.v20261121T1800Z.json": {
+   "bytes": 1395101
+  },
+  "cur-cbefs.v20261121T1900Z.json": {
+   "bytes": 1389614
+  },
+  "cur-cbefs.v20261121T2000Z.json": {
+   "bytes": 1384182
+  },
+  "cur-cbefs.v20261121T2100Z.json": {
+   "bytes": 1373331
+  },
+  "cur-cbefs.v20261121T2200Z.json": {
+   "bytes": 1365111
+  },
+  "cur-cbefs.v20261121T2300Z.json": {
+   "bytes": 1359579
+  },
+  "cur-cbefs.v20261122T0000Z.json": {
+   "bytes": 1362219
+  },
+  "cur-cbefs.v20261122T0100Z.json": {
+   "bytes": 1366886
+  },
+  "cur-cbefs.v20261122T0200Z.json": {
+   "bytes": 1374150
+  },
+  "cur-cbefs.v20261122T0300Z.json": {
+   "bytes": 1379251
+  },
+  "cur-cbefs.v20261122T0400Z.json": {
+   "bytes": 1392935
+  },
+  "cur-cbefs.v20261122T0500Z.json": {
+   "bytes": 1400221
+  },
+  "cur-cbefs.v20261122T0600Z.json": {
+   "bytes": 1398272
+  },
+  "cur-cbefs.v20261122T0700Z.json": {
+   "bytes": 1391110
+  },
+  "cur-cbefs.v20261122T0800Z.json": {
+   "bytes": 1385484
+  },
+  "cur-cbefs.v20261122T0900Z.json": {
+   "bytes": 1381646
+  },
+  "cur-cbefs.v20261122T1000Z.json": {
+   "bytes": 1371956
+  },
+  "cur-cbefs.v20261122T1100Z.json": {
+   "bytes": 1360981
+  },
+  "cur-cbefs.v20261122T1200Z.json": {
+   "bytes": 1356291
+  },
+  "cur-cbefs.v20261122T1300Z.json": {
+   "bytes": 1359234
+  },
+  "cur-cbefs.v20261122T1400Z.json": {
+   "bytes": 1364064
+  },
+  "cur-cbefs.v20261122T1500Z.json": {
+   "bytes": 1375520
+  }
+ }
+}

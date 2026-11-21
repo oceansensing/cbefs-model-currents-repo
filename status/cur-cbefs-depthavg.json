@@ -1,0 +1,45 @@
+{
+ "schema": 1,
+ "product": "cur-cbefs-depthavg",
+ "title": "CBEFS currents averaged over the whole water column",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-21T15:52:13Z",
+ "updated": "2026-11-21T15:52:13Z",
+ "hour": "2026-11-21T12:00:00Z",
+ "modelRun": "2026-11-21T00:00:00Z",
+ "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+ "hours": [
+  "2026-11-21T12:00:00Z"
+ ],
+ "files": {
+  "cur-cbefs-depthavg.json": {
+   "bytes": 1332933,
+   "sha256": "9ad4471d1a0158a0779146466af6972165e21f67a68fc8ddac1bb5583d8a7aa5"
+  },
+  "cur-cbefs-depthavg.v20261120T1200Z.json": {
+   "bytes": 1324013
+  },
+  "cur-cbefs-depthavg.v20261120T1800Z.json": {
+   "bytes": 1346506
+  },
+  "cur-cbefs-depthavg.v20261121T0000Z.json": {
+   "bytes": 1321802
+  },
+  "cur-cbefs-depthavg.v20261121T0600Z.json": {
+   "bytes": 1349567
+  },
+  "cur-cbefs-depthavg.v20261121T1800Z.json": {
+   "bytes": 1359175
+  },
+  "cur-cbefs-depthavg.v20261122T0000Z.json": {
+   "bytes": 1331701
+  },
+  "cur-cbefs-depthavg.v20261122T0600Z.json": {
+   "bytes": 1361927
+  },
+  "cur-cbefs-depthavg.v20261122T1200Z.json": {
+   "bytes": 1332248
+  }
+ }
+}
