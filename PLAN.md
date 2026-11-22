@@ -3,7 +3,7 @@
 The CBEFS **currents**. Created on GitHub by the owner and given its documents on
 2026-09-27, the day the owner asked for ECCOFS, CBEFS, Mercator's
 biogeochemistry, RTOFS and GFS to be published without the map drawing them.
-**Built and rehearsed 2026-09-27; not yet live.**
+**Built and rehearsed 2026-09-27; live since that day.**
 
 ## What it is for
 
@@ -121,3 +121,8 @@ reading 0.73), and the bottom is slower than the surface (0.068 against
 
 Rehearsed from this Mac: the step's three roots in 230 s, VIMS's server the
 slow part, every file matching the site's contract. Budget 13 hours.
+
+## 2026-11-21 — two days ahead and one behind (D3)
+
+Declared, rehearsed (D3 has the measurements) and pushed 04:18 UTC on 2026-11-22; the first run after,
+`44995502904`, green on build, Pages, R2 and the branch's job.

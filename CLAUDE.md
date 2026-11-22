@@ -158,6 +158,10 @@ fact from a guess that aged.
 
 ## What must not be got wrong here
 
+- **The `published` branch follows the R2 job** (`remember`): the next run takes what is published from that
+  branch's listing, so it is never pushed beside the R2 publish.
+- **`frames` is frozen at its reach of 2026-11-21; a time added is `moreFrames`'**, and an hour behind is never
+  written again under its name.
 - **The grid is curvilinear, and every reader here assumes a regular
   lattice.** A regrid onto regular latitude/longitude stands between the
   server and anything publishable, and a wrong one looks like plausible
@@ -188,8 +192,9 @@ fact from a guess that aged.
   with `--only=` naming this repository's products: too wide and the write
   fence refuses the run, too narrow and declared files are never written and
   their previous copies are served frozen.
-- **A green run is not a healthy one.** No workflow fails on `behind`; the
-  site's watchdog issue and each product's `staleCause` are the alarm.
+- **A green run is not a healthy one.** No workflow fails on `behind`; for what Pages carries, the site's watchdog issue and each
+  product's `staleCause` are the alarm; for what R2 alone carries, read the fate and `staleCause` in
+  the `published` branch's status, since the watchdog sees only the origin's schedule.
 - **This repository is public**, so its Actions logs are readable by anyone
   signed in to GitHub. Nothing secret is printed, and the downstream app is
   named nowhere here (the owner, 2026-09-26).
