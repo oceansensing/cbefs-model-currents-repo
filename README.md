@@ -55,6 +55,15 @@ job publishes them beside the rest (the site pipeline's D13, its note of
 | --- | --- | --- |
 | `uv-cbefs-<depth>m.json` | the current at each of the first 17 of Mercator's depths, 0.494 to 40.344 m, interpolated from the model's 20 terrain-following levels below the datum; since 2026-10-10 the day's mean, from the averages file's own time-averaged volume fluxes through each face (`Huon`, `Hvom`) over the face's thickness and width, held to the same file's depth-averaged current; one root a depth named for it to the meter (`-0m` … `-40m`) | 0.007 degree, `regional: true` |
 
+## The times either side (since 2026-11-21)
+
+Every product that changes with time publishes two days ahead and one behind
+(DECISIONS D3). A root's header lists them in `frames`, as it did before that
+day, and `moreFrames`, every time added; together, each time once. Every
+dated file (`<root's name>.v<its time>.json`) is R2's alone: none is on Pages
+or the `published` branch, and R2 keeps one while a root lists it and for an
+hour after.
+
 ## Where the data comes from
 
 **Source, read 2026-09-26/27**: VIMS publishes CBEFS output openly, with no

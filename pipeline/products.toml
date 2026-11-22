@@ -41,12 +41,17 @@ timeout_minutes = 20
 [steps.cbefs]
 cmd = ["python3", "scripts/fetch-cbefs.py", "--only=cur-cbefs,cur-cbefs-depthavg,cur-cbefs-bottom,uv-cbefs"]
 lane = "vims-thredds"
+timeout_minutes = 30
 
 [products.cur-cbefs]
 title = "CBEFS surface currents"
 step = "cbefs"
 roots = ["cur-cbefs.json"]
 writes = ["cur-cbefs.json", "cur-cbefs.v*.json"]
+r2_only = ["cur-cbefs.v*.json"]
+memory = "r2-kept"
+hours_ahead = 48
+hours_behind = 24
 max_age_hours = 8
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs"]
 
@@ -64,6 +69,10 @@ title = "CBEFS currents averaged over the whole water column"
 step = "cbefs"
 roots = ["cur-cbefs-depthavg.json"]
 writes = ["cur-cbefs-depthavg.json", "cur-cbefs-depthavg.v*.json"]
+r2_only = ["cur-cbefs-depthavg.v*.json"]
+memory = "r2-kept"
+hours_ahead = 48
+hours_behind = 24
 max_age_hours = 13
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs-depthavg"]
 
@@ -73,6 +82,10 @@ title = "CBEFS bottom currents"
 step = "cbefs"
 roots = ["cur-cbefs-bottom.json"]
 writes = ["cur-cbefs-bottom.json", "cur-cbefs-bottom.v*.json"]
+r2_only = ["cur-cbefs-bottom.v*.json"]
+memory = "r2-kept"
+hours_ahead = 48
+hours_behind = 24
 max_age_hours = 13
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=cur-cbefs-bottom"]
 
@@ -91,7 +104,10 @@ roots = ["uv-cbefs-0m.json", "uv-cbefs-2m.json", "uv-cbefs-3m.json", "uv-cbefs-4
          "uv-cbefs-11m.json", "uv-cbefs-13m.json", "uv-cbefs-16m.json", "uv-cbefs-18m.json",
          "uv-cbefs-22m.json", "uv-cbefs-25m.json", "uv-cbefs-29m.json", "uv-cbefs-34m.json",
          "uv-cbefs-40m.json"]
-writes = ["uv-cbefs-*m.json"]
+writes = ["uv-cbefs-*m.json", "uv-cbefs-*m.v*.json"]
 max_age_hours = 30
 r2_only = true
+memory = "r2-kept"
+hours_ahead = 48
+hours_behind = 24
 namespace = ["python3", "scripts/fetch-cbefs.py", "--namespace", "--only=uv-cbefs"]
