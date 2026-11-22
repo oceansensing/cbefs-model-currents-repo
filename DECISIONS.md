@@ -71,7 +71,10 @@ a slow server cannot take the step past its thirty minutes.
 The first run from the branch of 2026-11-21 read 301.0 MB from VIMS in 15
 requests, 142 seconds end to end: 320 files matching the contract, 150 dated
 files left off the branch, 178 objects for R2 (234.3 MB), none a base lists
-left out. 61 dated files of the first three leave Pages for R2 alone.
+left out. 61 dated files of the first three leave Pages for R2 alone. The
+run after it, once the surface current's hour had moved, read 14.2 MB in 7
+requests, 15 seconds, and sent 9 objects (2.8 MB): the window moved by its
+hour, 128 dated files kept, none of the 150 times listed missing from R2.
 
 One-way in the ordinary sense: `moreFrames` is a shape readers will code
 against, and `frames` stays as it was because readers already do.
