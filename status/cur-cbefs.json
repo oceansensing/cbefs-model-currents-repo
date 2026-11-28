@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "cur-cbefs",
+ "title": "CBEFS surface currents",
+ "fate": "held",
+ "reason": "step cbefs: upstream failed \u2014 ! the VIMS THREDDS server failed after 5 tries: HTTP 503 for https://tds.vims.edu/thredds/catalog/abever/ECB_FORECAST_HR/AVERAGES/catalog.xml",
+ "checked": "2026-11-26T21:50:51Z",
+ "updated": "2026-11-26T21:50:51Z",
+ "hour": "2026-11-26T21:00:00Z",
+ "modelRun": "2026-11-26T00:00:00Z",
+ "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+ "hours": [
+  "2026-11-26T21:00:00Z"
+ ],
+ "files": {
+  "cur-cbefs.json": {
+   "bytes": 1395801,
+   "sha256": "3c43f1383dcf1d46de436613386a7c3a82a7b6b4ad0f77cfc2cc4c0d015e20f0"
+  },
+  "cur-cbefs.v20261126T2100Z.json": {
+   "bytes": 1379283
+  }
+ }
+}

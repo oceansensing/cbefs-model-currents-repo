@@ -1,0 +1,24 @@
+{
+ "schema": 1,
+ "product": "cur-cbefs-depthavg",
+ "title": "CBEFS currents averaged over the whole water column",
+ "fate": "held",
+ "reason": "step cbefs: upstream failed \u2014 ! the VIMS THREDDS server failed after 5 tries: HTTP 503 for https://tds.vims.edu/thredds/catalog/abever/ECB_FORECAST_HR/AVERAGES/catalog.xml",
+ "checked": "2026-11-26T21:50:51Z",
+ "updated": "2026-11-26T19:15:08Z",
+ "hour": "2026-11-26T18:00:00Z",
+ "modelRun": "2026-11-26T00:00:00Z",
+ "source": "Chesapeake Bay Environmental Forecast System (CBEFS), Virginia Institute of Marine Science",
+ "hours": [
+  "2026-11-26T18:00:00Z"
+ ],
+ "files": {
+  "cur-cbefs-depthavg.json": {
+   "bytes": 1372584,
+   "sha256": "3a8049fa24744a079541962a3da3a160aa0071f54baa20c29f52420eb64db006"
+  },
+  "cur-cbefs-depthavg.v20261126T1800Z.json": {
+   "bytes": 1369392
+  }
+ }
+}
